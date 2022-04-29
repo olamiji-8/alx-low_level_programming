@@ -1,43 +1,58 @@
-#include "main.h"
 #include <stdlib.h>
+#include "main.h"
 
 /**
-* str_concat - concatenates two strings.
-* @s1: first string.
-* @s2: second string.
-*
-* Return: pointer of an array of chars
+ *_sl - returns str lenght
+ *@s: arguement.
+ *Return: returns str lenght
 */
-char *str_concat(char *s1, char *s2)
+
+int _sl(char *s)
 {
-char *strout;
-unsigned int i, j, k, limit;
-
-if (s1 == NULL)
-s1 = "";
-if (s2 == NULL)
-s2 = "";
-
-for (i = 0; s1[i] != '\0'; i++)
-;
-
-for (j = 0; s2[j] != '\0'; j++)
-;
-
-strout = malloc(sizeof(char) * (i + j + 1));
-
-if (strout == NULL)
+int l = 0;
+if (s == NULL)
+	l = 1;
+while (s[l] != '\0')
 {
-free(strout);
-return (NULL);
+l++;
+}
+return (l + 1);
 }
 
-for (k = 0; k < i; k++)
-strout[k] = s1[k];
+/**
+*str_concat - point to cncatenation str
+*@s1: arguement.
+*@s2: arguement2.
+*Return: returns the concatenation
+*/
 
-limit = j;
-for (j = 0; j <= limit; k++, j++)
-strout[k] = s2[j];
-
-return (strout);
+char *str_concat(char *s1, char *s2)
+{
+int i = 0;
+int n = 0;
+char *cstr = malloc(sizeof(char) * 20);
+if (cstr == NULL)
+	return (NULL);
+if (s1 != NULL)
+{
+while (s1[i] != '\0')
+{
+cstr[i] = s1[i];
+i++;
+}
+}
+if (s2 != NULL)
+{
+while (s2[n] != '\0')
+{
+cstr[i] = s2[n];
+i++;
+n++;
+}
+}
+if (!(s1 == NULL || s2 == NULL))
+{
+return (cstr);
+}
+return (0);
 }

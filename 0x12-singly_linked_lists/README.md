@@ -1,2 +1,14 @@
-# Singly linked lists
-Project done during Full Stack Software Engineering studies at Alx School. It aims to learn about linked lists in C language.
+# 0x12-singly_linked_lists
+
+## steps to get started
+
+- create a node using struct
+
+typedef struct list_s
+{
+    char *str;
+    unsigned int len;
+    struct list_s *next;
+} list_t;
+
+#Author techmate-dot

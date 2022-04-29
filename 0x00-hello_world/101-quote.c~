@@ -1,0 +1,14 @@
+#!/bin/bash
+#include <stdio.h>
+/**
+*main - funtion
+*
+*Return: 1 if successful
+*/
+
+
+int main()
+{
+fprintf(stderr, "hello world!n");
+return (1);
+}

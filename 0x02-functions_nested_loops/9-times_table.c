@@ -1,39 +1,38 @@
 #include "main.h"
 /**
- *times_table - 9 times table
- *
- *Return: no return value
- *
- */
+*times_table - function that returns a void value
+*Description: print out time table
+*/
 void times_table(void)
 {
-int i, j, product;
-for (i = 0; i < 10; i++)
+int num1, num2, multi, i, range;
+i = 1;
+range = 10;
+num1 = 0;
+num2 = 0;
+while (i < range + 1)
 {
-for (j = 0; j < 10;  j++)
+for (num1 = 0; num1 < range; num1++)
 {
-product = i * j;
-if (j == 0)
-{
-_putchar('0' + product);
-}
-else if (product >= 10)
-{
-_putchar(' ');
-_putchar('0' + (product / 10));
-_putchar('0' + (product % 10));
-}
-else
+multi = num1 *num2;
+if (multi < 10)
 {
 _putchar(' ');
-_putchar(' ');
-_putchar(product + '0');
+_putchar('0' + (multi));
 }
-if (j != 9)
+else if (multi >= 10)
+{
+_putchar('0' + (multi) / 10);
+_putchar('0' + (multi) % 10);
+}
+if (num1 < range - 1)
 {
 _putchar(',');
+_putchar(' ');
 }
 }
+num2++;
 _putchar('\n');
+i++;
 }
 }

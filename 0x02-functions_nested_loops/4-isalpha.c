@@ -1,20 +1,24 @@
-#include "main.h"
+#include <stdio.h>
 /**
- *_isalpha - check for uppercase letters
- *@c: input.
- *
- *Return: 1 if c is uppercase
- * 0 if c is anyhting else.
- */
+*_isalpha - entry point
+*
+*Return: returns 0 or 1
+*@c: argument parsed to the function
+*/
 int _isalpha(int c)
 {
-if ((c >= 'A' && c <= 'Z') ||
-(c >= 'a' && c <= 'z'))
+int a;
+if (c >= 97 && c <= 122)
 {
-return (1);
+a = 1;
+}
+else if (c >= 65 && c <= 90)
+{
+a = 1;
 }
 else
 {
-return (0);
+a = 0;
 }
+return (a);
 }

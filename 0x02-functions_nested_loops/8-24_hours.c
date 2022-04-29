@@ -1,22 +1,44 @@
-#include "main.h"
+#include <stdio.h>
 /**
- *jack_bauer -  count down 24hrs
- *
- *Return: void.
- */
-void  jack_bauer(void)
+*jack_bauer - entry point
+*
+*Description: this func return some value
+*/
+void jack_bauer(void)
 {
-int hour, minute;
-for (hour = 0; hour <= 23; hour++)
+int H = 0, h = 0, m = 0, s = 0;
+
+while (H < 3)
 {
-for (minute = 0; minute <= 59; minute++)
+while (h < 10)
 {
-_putchar('0' + (hour / 10));
-_putchar('0' + (hour % 10));
-_putchar(':');
-_putchar('0' + (minute / 10));
-_putchar('0' + (minute % 10));
-_putchar('\n');
+while (m < 6)
+{
+while (s < 10)
+{
+putchar('0' + H);
+putchar('0' + h);
+putchar(':');
+putchar('0' + m);
+putchar('0' + s);
+putchar('\n');
+s++;
 }
+s = 0;
+m++;
+}
+s = 0;
+m = 0;
+h++;
+if (H == 2 && h == 4)
+{
+break;
+H = 4;
+}
+}
+s = 0;
+m = 0;
+h = 0;
+H++;
 }
 }

@@ -1,23 +1,24 @@
-#include <unistd.h>
-#include <stdlib.h>
-#include <ctype.h>
-#include "main.h"
-
+#include <stdio.h>
 /**
- * _islower - checks for a lowercase character
- *
- * @c: the character to be checked
- *
- * Return: returns 1 if the character is lower case and 0 otherwise
- */
+*_islower - entry point
+*
+*Return: returns 0 or 1
+*@c: argument parsed to the function
+*/
 int _islower(int c)
 {
-	if (islower(c) != 0)
-	{
-		return (1);
-	}
-	else
-	{
-		return (0);
-	}
+int a;
+if (c >= 97 && c <= 122)
+{
+a = 1;
+}
+else if (c >= 65 && c <= 90)
+{
+a = 0;
+}
+else
+{
+a = 0;
+}
+return (a);
 }
