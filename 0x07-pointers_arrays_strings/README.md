@@ -1,4 +1,3 @@
-# 0x07. C - Even more pointers, arrays and strings
+*Refactoring the READme.
 
-## Concepts
-- Pointers and arrays
+

@@ -1,29 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 /**
-*main - entry point
-*
-*Return: 0
-*/
+ * main - entry block
+ * Description: alphabets in lower and upper
+ * Return: 0
+ */
 int main(void)
 {
-char alph = 'a';
-int num = 0;
-while (num < 26)
-{
-putchar(alph);
-alph++;
-num++;
-}
-num = 0;
-alph = 'A';
-while (num < 26)
-{
-putchar(alph);
-alph++;
-num++;
-}
-putchar('\n');
-return (0);
+	char c = 'a';
+
+	while (c <= 'z')
+	{
+		putchar(c);
+		c++;
+	}
+	c = 'A';
+
+	while (c <= 'Z')
+	{
+		putchar(c);
+		c++;
+	}
+	putchar('\n');
+	return (0);
 }

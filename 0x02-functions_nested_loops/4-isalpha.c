@@ -1,24 +1,12 @@
-#include <stdio.h>
+#include "main.h"
+
 /**
-*_isalpha - entry point
-*
-*Return: returns 0 or 1
-*@c: argument parsed to the function
-*/
+ * _isalpha - check if character is lower case
+ * @c: character to be checked
+ *
+ * Return: 1 if lowercase 0 otherwhise
+ */
 int _isalpha(int c)
 {
-int a;
-if (c >= 97 && c <= 122)
-{
-a = 1;
-}
-else if (c >= 65 && c <= 90)
-{
-a = 1;
-}
-else
-{
-a = 0;
-}
-return (a);
+	return (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z') ? 1 : 0);
 }

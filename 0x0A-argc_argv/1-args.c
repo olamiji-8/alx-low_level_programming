@@ -1,17 +1,18 @@
 #include <stdio.h>
 
 /**
-*main - a program that prints the number of arguments passed into it.
-*@argc: arg counter
-*@argv: arg vector
-*Return: return the count of arg
-*/
+ * main - prints the for the program.
+ * @argc: is a counter of argument for int.
+ * @argv: is a counter for value of the argument to char
+ * Return: Returns always success.
+**/
 
 int main(int argc, char *argv[])
 {
-if (argv)
-{
-printf("%i\n", argc - 1);
-}
+(void)argv;
+
+printf("%d\n", (argc - 1));
+
 return (0);
 }
+

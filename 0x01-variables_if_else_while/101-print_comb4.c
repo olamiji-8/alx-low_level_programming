@@ -1,38 +1,43 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 /**
-*main - entry point
-*
-*Return: 0
-*/
+ * main - main block
+ * Description: Write a program that prints all possible
+ * Return: 0
+ */
 int main(void)
 {
-int num1 = 48;
-int num2 = 49;
-int num3 = 50;
-while (num1 < 56)
-{
-while (num3 < 58)
-{
-putchar(num1);
-putchar(num2);
-putchar(num3);
-if (num1 != 55)
-{
-putchar(',');
-putchar(' ');
-}
-num3++;
-}
-if (num2 == 56)
-{
-num2 = num1 + 1;
-num1++;
-}
-num2++;
-num3 = num2 + 1;
-}
-putchar('\n');
-return (0);
+	int c;
+	int d;
+	int e = 0;
+
+	while (e < 10)
+	{
+		d = 0;
+		while (d < 10)
+		{
+			c = 0;
+			while (c < 10)
+			{
+				if (c != d && d != e && e < d && d < c)
+				{
+					putchar('0' + e);
+					putchar('0' + d);
+					putchar('0' + c);
+
+					if (c + d + e != 9 + 8 + 7)
+					{
+						putchar(',');
+						putchar(' ');
+					}
+				}
+
+				c++;
+			}
+			d++;
+		}
+		e++;
+	}
+	putchar('\n');
+	return (0);
 }

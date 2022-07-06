@@ -1,29 +1,33 @@
 #include "main.h"
 
 /**
-*print_diagonal - print aout \\  diagonally
-*@n: arguement
-*/
-
+ * print_diagonal - Entry point
+ *@n: number of times to print '\' in diagonal
+ * Return: no return
+ */
 void print_diagonal(int n)
 {
+	int i;
+	char k;
+	char s;
+	int j;
 
-int loop1, loop2;
-
-loop1 = 0;
-
-while (loop1 < n && n > 0)
-{
-while (loop2 < loop1)
-{
-_putchar(' ');
-loop2++;
-}
-loop2 = 0;
-_putchar(92);
-_putchar('\n');
-loop1++;
-}
-if (n <= 0)
-_putchar('\n');
+	k = '\\';
+	s = ' ';
+	for (i = 0; i < n; i++)
+	{
+		if (n > 1)
+		{
+			for (j = 0; j < i; j++)
+			{
+				_putchar(s);
+			}
+			_putchar(k);
+			_putchar('\n');
+		}
+	}
+		if (n <= 0)
+		{
+			_putchar('\n');
+		}
 }

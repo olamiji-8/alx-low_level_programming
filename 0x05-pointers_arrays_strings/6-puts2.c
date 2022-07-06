@@ -1,19 +1,21 @@
 #include "main.h"
 /**
-*puts2 - A unction that prints every other character of a string,
-*starting with the first character, followed by a new line.
-*@str: Arguement
+* puts2 - print one char out of 2 of a string
+*@str: string to print
+*Return: Nothing
 */
 void puts2(char *str)
 {
-int i = 0;
-while (str[i] != '\0')
-{
-if (i % 2 == 0)
-{
-_putchar(str[i]);
-}
-i += 1;
-}
-_putchar('\n');
+	int len;
+	char l;
+
+	for (len = 0; *(str + len) != 0; len++)
+	{
+		if (len % 2 == 0)
+		{
+			l = *(str + len);
+			_putchar(l);
+		}
+	}
+	_putchar('\n');
 }

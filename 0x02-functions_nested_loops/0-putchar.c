@@ -1,17 +1,13 @@
-#include "main.h"
+#include <stdio.h>
+
+
 /**
-*main - all programs run from witin this function
-*
-*Return: return 0 if the program is good _putchar
-*/
+ * main -Entry point of the program
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-int i;
-char name[8] = "_putchar";
-for (i = 0; i < 8; i++)
-{
-_putchar(name[i]);
-}
-_putchar('\n');
-return (0);
+	printf("_putchar\n");
+	return (0);
 }

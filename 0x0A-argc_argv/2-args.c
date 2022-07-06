@@ -1,25 +1,19 @@
 #include <stdio.h>
 
 /**
-*main - prints all arguments it receives.
-*@c: counter
-*@v: vector
-*Return: returns all arguements
-*/
+ * main - prints the function.
+ * @argc: is argument counter to an int.
+ * @argv: is an agument value determiner for char.
+ *
+ * Return: Returns always success.
+**/
 
-int main(int c, char *v[])
+int main(int argc, char *argv[])
 {
-int count = 0;
+int i;
+for (i = 0; i < argc; i++)
+printf("%s\n", argv[i]);
 
-while (count < c)
-{
-printf("%s", v[count]);
-count++;
-if (count != c)
-{
-putchar('\n');
-}
-}
-putchar('\n');
 return (0);
+
 }

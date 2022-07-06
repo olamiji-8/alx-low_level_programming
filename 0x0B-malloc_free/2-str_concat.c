@@ -1,58 +1,43 @@
-#include <stdlib.h>
 #include "main.h"
-
+#include <stdlib.h>
+#include <stdio.h>
 /**
- *_sl - returns str lenght
- *@s: arguement.
- *Return: returns str lenght
-*/
-
-int _sl(char *s)
-{
-int l = 0;
-if (s == NULL)
-	l = 1;
-while (s[l] != '\0')
-{
-l++;
-}
-return (l + 1);
-}
-
-/**
-*str_concat - point to cncatenation str
-*@s1: arguement.
-*@s2: arguement2.
-*Return: returns the concatenation
-*/
-
+ * str_concat - concatenates 2 strings
+ *
+ * @s1: first string
+ * @s2: string to add to end of of first string
+ *
+ * Return: pointer to newly allocated string concatenation
+ */
 char *str_concat(char *s1, char *s2)
 {
-int i = 0;
-int n = 0;
-char *cstr = malloc(sizeof(char) * 20);
-if (cstr == NULL)
-	return (NULL);
-if (s1 != NULL)
-{
-while (s1[i] != '\0')
-{
-cstr[i] = s1[i];
-i++;
-}
-}
-if (s2 != NULL)
-{
-while (s2[n] != '\0')
-{
-cstr[i] = s2[n];
-i++;
-n++;
-}
-}
-if (!(s1 == NULL || s2 == NULL))
-{
-return (cstr);
-}
-return (0);
+	unsigned int size1 = 0, size2 = 0;
+	char *ptr, *ret;
+
+	ptr = s1;
+	if (s1)
+		while (*ptr++)
+			size1++;
+	else
+		s1 = "";
+
+	ptr = s2;
+	if (s2)
+		while (*ptr++)
+			size2++;
+	else
+		s2 = "";
+
+	ret = malloc(size1 + size2 + 1);
+	if (!ret)
+		return (NULL);
+
+	ptr = ret;
+	while (*s1)
+		*ptr++ = *s1++;
+	while (*s2)
+		*ptr++ = *s2++;
+	*ptr = 0;
+
+	return (ret);
 }

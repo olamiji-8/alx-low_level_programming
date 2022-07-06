@@ -1,37 +1,36 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+
 /**
-*main - entry point
-*
-*Return: 0 if no error found
-*/
+ * main - create 2 pairs of numbers that do not repeat
+ * Return: 0
+ */
 int main(void)
 {
-int num1;
-int num2;
-int checker;
-num1 = 0;
-while (num1 <= 99)
-{
-num2 = num1 + 1;
-while (num2 <= 99)
-{
-checker = !(num1 == 98 && num2 == 99);
-putchar(48 + num1 / 10);
-putchar(48 + num1 % 10);
-putchar(' ');
-putchar(48 + num2 / 10);
-putchar(48 + num2 % 10);
-if (checker)
-{
-putchar(',');
-putchar(' ');
-}
-num2++;
-}
-num1++;
-}
-putchar('\n');
-return (0);
+	int j, i;
+
+	for (j = 0; j <= 99; j++)
+	{
+		for (i = j; i <= 99; i++)
+		{
+			if (i != j)
+			{
+
+				putchar(j / 10 + 48);
+				putchar(j % 10 + 48);
+				putchar(' ');
+				putchar(i / 10 + 48);
+				putchar(i % 10 + 48);
+
+				if (j * 100 + i != 9899)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+
+		}
+
+	}
+	putchar('\n');
+	return (0);
 }

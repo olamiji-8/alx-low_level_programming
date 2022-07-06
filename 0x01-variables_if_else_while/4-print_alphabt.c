@@ -1,22 +1,25 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 /**
-*main - entry point
-*
-*Return: 0
-*/
+ * main - Entry block
+ * Description: lowercase without q and e
+ * Return: 0
+ */
 int main(void)
 {
-char alph = 'a';
-int num = 0;
-while (num < 26)
-{
-if (alph != 'q' && alph != 'e')
-putchar(alph);
-alph++;
-num++;
+	char c = 'a';
+
+	while (c <= 'z')
+	{
+		if (c != 'q' && c != 'e')
+		{
+			putchar(c);
+		}
+		c++;
+	}
+
+	putchar('\n');
+	return (0);
+
 }
-putchar('\n');
-return (0);
-}
+

@@ -1,31 +1,29 @@
 #include "main.h"
+
 /**
-*more_numbers - print number from (0-9)
-*/
+ * more_numbers - Entry point
+ *
+ * Return: no return
+ */
 void more_numbers(void)
 {
-int loop1, loop2, num;
-loop1 = 1;
-loop2 = 1;
-while (loop1 <= 10)
-{
-	num = 48;
-	while (loop2 <= 15)
-{
-		if (loop2 == 11)
-{
-			num = 48;
-}
-		if (loop2 > 10)
-{
-			_putchar(49);
-}
-		_putchar(num);
-		++loop2;
-		num++;
-}
-	loop2 = 1;
-	_putchar('\n');
-	loop1++;
-}
+	char i;
+	int k;
+	int f;
+	int l;
+
+	for (i = '0'; i <= '9'; i++)
+	{
+		for (k = 0; k <= 14; k++)
+		{
+			f = k / 10;
+			l = k % 10;
+			if (k >= 10)
+			_putchar (f + '0');
+			if (k == 10)
+				l = 0;
+			_putchar(l + '0');
+		}
+		_putchar('\n');
+	}
 }

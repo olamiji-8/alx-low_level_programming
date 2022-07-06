@@ -1,22 +1,18 @@
 #include "main.h"
 /**
-*_isdigit - returns the value
-*@c: argument parsed
-*Return: returns a value
-*/
+ * _isdigit - checks for a digit
+ * @c: the parameter to print
+ *
+ * Return: 1 or 0
+ */
 int _isdigit(int c)
 {
-char number;
-int r;
-r = 0;
-number = 48;
-for (; number <= 57; ++number)
-{
-if (c == number)
-{
-r = 1;
-break;
-}
-}
-return (r);
+	if (c >= 48 && c <= 57)
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }

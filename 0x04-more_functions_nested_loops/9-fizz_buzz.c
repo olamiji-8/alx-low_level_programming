@@ -1,36 +1,33 @@
 #include <stdio.h>
 /**
-*main - main extry poin of the program
-*Return: returns the value 0 always
-*/
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-int fizz;
-char *f = "Fizz";
-char *b = "Buzz";
-for (fizz = 1; fizz <= 100; fizz++)
-{
-if (fizz % 3 == 0 && fizz % 5 == 0)
-{
-printf("%s%s", f, b);
-}
-else if (fizz % 5 == 0)
-{
-printf("%s", b);
-}
-else if (fizz % 3 == 0)
-{
-printf("%s", f);
-}
-else
-{
-printf("%i", fizz);
-}
-if (fizz != 100)
-{
-putchar(' ');
-}
-}
-putchar('\n');
-return (0);
+	int m;
+
+	for (m = 1 ; m < 100 ; m++)
+	{
+		if ((m % 3) == 0 && (m % 5) == 0)
+		{
+			printf("FizzBuzz ");
+		}
+		else if (m % 3 == 0)
+		{
+			printf("Fizz ");
+		}
+		else if (m % 5 == 0)
+		{
+			printf("Buzz ");
+		}
+		else
+		{
+		printf("%d ", m);
+		}
+	}
+	printf("Buzz");
+	printf("\n");
+	return (0);
 }

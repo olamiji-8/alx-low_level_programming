@@ -1,38 +1,32 @@
 #include "main.h"
 
 /**
-*_sqrt - calculates the sqrt
-*@n: arguement
-*@con: second arguement
-*Return: return the sqr of n
-*/
+ * sqrt_a - main - check the code
+ * @a: number
+ * @b: number of power
+ * Return: Always 0.
+ */
 
-int _sqrt(int n, int con)
+int sqrt_a(int a, int b)
 {
-if ((con * con) == n)
-{
-return (con);
-}
-if ((con * con) > n)
-{
-return (-1);
-}
-return (_sqrt(n, con + 1));
+	if (b * b == a)
+	{
+		return (b);
+	}
+	else if (b * b > a)
+	{
+		return (-1);
+	}
+	return (sqrt_a(a, b + 1));
 }
 
 /**
-*_sqrt_recursion - returns the natural square root of a number
-*@n: arguement
-*Return: return the sqr of n
-*/
-
+ * _sqrt_recursion - main - check the code
+ * @n: number
+ *
+ * Return: Always 0.
+ */
 int _sqrt_recursion(int n)
 {
-int con = 0;
-if (n < 0)
-{
-return (-1);
-}
-
-return (_sqrt(n, con));
+	return (sqrt_a(n, 0));
 }
