@@ -17,20 +17,3 @@ This repository contains programs written for the low-level programming.
 * [0x0D. C - 0x0D-preprocessor ](./0x0D-preprocessor )
 * [0x0E. C - 0x0E-structures_typedef ](./0x0E-structures_typedef )
 * [0x0F. C - 0x0F-function_pointers ](./0x0F-function_pointers )
-
-## Author :Ethiopian Programmer (IC):
-
-**Aysanew Yonas(IC)**__ [aysi143](https://github.com/aysi143)
-
-## Acknowledgements :pray:
-
-All work contained in this project is progressive project covered  as part of the curriculum for
-alx-intranet.hbtn School. Alx-intranet.hbtn is an interjoined Online  full-stack software engineering program that prepares students for careers in the tech industry
-using project-based peer learning. For more information, visit
-[this link](https://www.alxafrica.com/).
-
-<p align="center">
-  <img
-    src="https://lh3.googleusercontent.com/mE907ZPomuw2w-uZ_GAOXkzkRbmCbKppuLEdq3NGpKCOD1J1sIVZQnu7ZqbfA7NXNEhMYvDPF0szyfhPUdelak5tRlVR4tdOCJw=w338"
-    alt="ALX logo">
-</p>
